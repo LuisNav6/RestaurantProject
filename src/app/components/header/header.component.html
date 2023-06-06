@@ -1,14 +1,13 @@
 <header [ngClass]="{'transparent': isTransparent, 'black': !isTransparent}" fxLayout="column" fxLayout="row"
   fxLayoutAlign="center center" fxLayoutGap="20px">
-  <a routerLink="/rooms">Rooms</a>
-  <a routerLink="/explore">Explore</a>
-  <a routerLink="/restaurant">Restaurant</a>
+  <a href="#rooms">Rooms</a>
+  <a href="#explore">Explore</a>
+  <a href="#restaurant">Restaurant</a>
   <div class="logo" fxLayoutAlign="center center" routerLink="/">
-    <img src="assets/imgs/Logo-Hotel-low.png" alt="">
+    <img src="assets/imgs/taco-mundo-wordmark.png" alt="">
   </div>
-  <a routerLink="/about">About us</a>
-  <a routerLink="/contact-us">Contact us</a>
-
+  <a href="#about">About us</a>
+  <a href="#contact-us">Contact us</a>
   <div class="menu-container" *ngIf="isRegularUser" >
     <div class="username" (click)="toggleMenu()">{{userEmailHeader}}</div>
     <div class="menu" *ngIf="showMenu" >

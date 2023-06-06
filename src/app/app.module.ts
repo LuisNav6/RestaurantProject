@@ -25,9 +25,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { MainComponent } from './components/main/main.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './components/home/home.component';
-import { SectionExperienceComponent } from './components/home/section-experience/section-experience.component';
-import { SectionHomeComponent } from './components/home/section-home/section-home.component';
-import { SectionSatisfyComponent } from './components/home/section-satisfy/section-satisfy.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -43,11 +40,6 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
 import { MenuSearchComponent } from './components/restaurant/menu-search/menu-search.component';
 import { RestaurantHomeComponent } from './components/restaurant/restaurant-home/restaurant-home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ExploreComponent } from './components/explore/explore.component';
-import { ExploreHomeComponent } from './components/explore/explore-home/explore-home.component';
-import { ImgExploreComponent } from './components/explore/img-explore/img-explore.component';
-import { VideoExploreComponent } from './components/explore/video-explore/video-explore.component';
-import { DomseguroPipe } from './components/explore/video-explore/domseguro.pipe';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FormBookComponent } from './components/contact-us/form-book/form-book.component';
 import { MeetOurTeamComponent } from './components/contact-us/meet-our-team/meet-our-team.component';
@@ -64,9 +56,6 @@ import { MeetOurTeamComponent } from './components/contact-us/meet-our-team/meet
     RegisterComponent,
     MainComponent,
     HomeComponent,
-    SectionExperienceComponent,
-    SectionHomeComponent,
-    SectionSatisfyComponent,
     HeaderComponent,
     FooterComponent,
     AdminComponent,
@@ -79,11 +68,6 @@ import { MeetOurTeamComponent } from './components/contact-us/meet-our-team/meet
     RestaurantComponent,
     MenuSearchComponent,
     RestaurantHomeComponent,
-    ExploreComponent,
-    ExploreHomeComponent,
-    ImgExploreComponent,
-    VideoExploreComponent,
-    DomseguroPipe,
     ContactUsComponent,
     FormBookComponent,
     MeetOurTeamComponent
