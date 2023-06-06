@@ -19,14 +19,24 @@
     font-family: 'Radley', serif;
 }
 
-table {
+.table-wird {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     border-collapse: collapse;
-    background-color: #081820;
+    background-color: black;
     color: white;
 }
+
+.table-wird tr:hover {
+    background-color: #ad701a;
+    cursor: pointer;
+}
+
+.table-wird .sub-title {
+    background-color: #E14C24;
+}
+
 
 .title-cat {
     text-align: center;
@@ -34,8 +44,9 @@ table {
     font-size: 1.2em;
     padding: 10px 0;
     color: white;
-  }
-  
+    background-color: #FE9F1B;
+}
+
 
 th,
 td {
@@ -54,7 +65,7 @@ td {
     vertical-align: middle;
 }
 
-.menu-deploy{
+.menu-deploy {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MealService } from 'src/app/shared/meal.service';
 
 @Component({
-  selector: 'app-menu-search',
-  templateUrl: './menu-search.component.html',
-  styleUrls: ['./menu-search.component.scss']
+  selector: 'app-menu-container',
+  templateUrl: './menu-container.component.html',
+  styleUrls: ['./menu-container.component.scss']
 })
-export class MenuSearchComponent implements OnInit{
+export class MenuContainerComponent implements OnInit {
+
   meals_seaFood: any[] = [];
   meals_meats: any[] = [];
   meals_dessert: any[] = [];

@@ -34,15 +34,11 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/about/contact/contact.component';
 import { MapComponent } from './components/about/map/map.component';
 import { MissionComponent } from './components/about/mission/mission.component';
-import { RoomsComponent } from './components/rooms/rooms.component';
-import { RoomTypesComponent } from './components/rooms/room-types/room-types.component';
-import { RestaurantComponent } from './components/restaurant/restaurant.component';
-import { MenuSearchComponent } from './components/restaurant/menu-search/menu-search.component';
-import { RestaurantHomeComponent } from './components/restaurant/restaurant-home/restaurant-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FormBookComponent } from './components/contact-us/form-book/form-book.component';
 import { MeetOurTeamComponent } from './components/contact-us/meet-our-team/meet-our-team.component';
+import { MenuContainerComponent } from './components/home/menu-container/menu-container.component';
 
 @NgModule({
   declarations: [
@@ -63,14 +59,10 @@ import { MeetOurTeamComponent } from './components/contact-us/meet-our-team/meet
     ContactComponent,
     MapComponent,
     MissionComponent,
-    RoomsComponent,
-    RoomTypesComponent,
-    RestaurantComponent,
-    MenuSearchComponent,
-    RestaurantHomeComponent,
     ContactUsComponent,
     FormBookComponent,
-    MeetOurTeamComponent
+    MeetOurTeamComponent,
+    MenuContainerComponent
   ],
   imports: [
     BrowserModule,
