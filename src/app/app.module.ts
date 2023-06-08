@@ -35,10 +35,12 @@ import { ContactComponent } from './components/about/contact/contact.component';
 import { MapComponent } from './components/about/map/map.component';
 import { MissionComponent } from './components/about/mission/mission.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { FormBookComponent } from './components/contact-us/form-book/form-book.component';
-import { MeetOurTeamComponent } from './components/contact-us/meet-our-team/meet-our-team.component';
+import { FormBookComponent } from './components/home/form-book/form-book.component';
 import { MenuContainerComponent } from './components/home/menu-container/menu-container.component';
+import { MeetOurTeamComponent } from './components/home/meet-our-team/meet-our-team.component';
+import { ExploreComponent } from './components/home/explore/explore.component';
+import { SectionSatisfyComponent } from './components/home/section-satisfy/section-satisfy.component';
+import { SectionMissionComponent } from './components/home/section-mission/section-mission.component';
 
 @NgModule({
   declarations: [
@@ -59,10 +61,12 @@ import { MenuContainerComponent } from './components/home/menu-container/menu-co
     ContactComponent,
     MapComponent,
     MissionComponent,
-    ContactUsComponent,
     FormBookComponent,
     MeetOurTeamComponent,
-    MenuContainerComponent
+    MenuContainerComponent,
+    ExploreComponent,
+    SectionSatisfyComponent,
+    SectionMissionComponent
   ],
   imports: [
     BrowserModule,

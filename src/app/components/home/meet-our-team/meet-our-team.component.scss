@@ -7,9 +7,18 @@
     padding-right: 60px;
     min-height: 100%;
     min-width: 100%;
-    background-color: #072230;
+    background-color: #000000;
     margin: 0 auto;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    gap: 50px;
+}
+
 
 .title-home h1 {
     text-align: center;
@@ -20,8 +29,9 @@
 }
 
 .bg-dark-blue {
-    background-color: rgb(231, 241, 250);
+    background-color: #0c0c0c;
     /* Color de fondo azul oscuro */
+    color: white;
     text-align: center;
 }
 
@@ -50,7 +60,6 @@
     align-items: center;
     justify-content: space-evenly;
     font-size: 2rem;
-
 }
 
 .social-icons a:hover {
@@ -66,7 +75,7 @@
 }
 
 fa-icon{
-    color: #072230;
+    color: #FE9F1B; 
     cursor: pointer;
 }
 .tw:hover{

@@ -10,12 +10,10 @@ import { LoginSmsComponent } from './components/login-sms/login-sms.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './components/home/home.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home'},
   { path: 'home', component: HomeComponent},
-  { path: 'contact-us', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register-student', component: AddStudentComponent, canActivate: [AuthGuard] },
   { path: 'view-students', component: StudentListComponent, canActivate: [AuthGuard] },

@@ -16,19 +16,14 @@ export class MeetOurTeamComponent {
     cardText: "Antonio is a skilled Front-End Developer with a passion for creating visually appealing and user-friendly websites.", 
     url: "assets/imgs/team/tony.jpg"},
 
-    {name : "Salvador Gaytan", 
-    charge: "Back-Dev", 
-    cardText: "Salvador is a skilled Back-End Developer with a passion for building efficient and reliable systems.", 
-    url: "assets/imgs/team/salvador.png"},
+    {name : "Armando Escareño", 
+    charge: "Front-Dev", 
+    cardText: "Armando is a skilled Front-End Developer with a passion for building efficient and reliable systems.", 
+    url: "assets/imgs/team/escareño.png"},
 
     {name : "Luis Navarrete", 
     charge: "Back-Dev",
     cardText: "Luis is a skilled Back-End Developer with a passion for building robust and scalable applications.", 
     url: "assets/imgs/team/luis.jpg"},
-
-    {name : "Michelle Ruvalcaba", 
-    charge: "Front-Dev", 
-    cardText: "Michelle is a skilled Front-End Developer with a passion for creating beautiful and engaging websites.", 
-    url: "assets/imgs/team/michelle.png"},
   ]
 }
