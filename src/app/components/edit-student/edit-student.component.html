@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Edit User Details</h1>
+  <h1 class="h2">Edit Reservation Details</h1>
   <div class="btn-toolbar mb-2 mb-md-0">
     <div class="btn-group">
       <button class="btn btn-sm btn-outline-secondary" (click)="goBack()">Go Back</button>
@@ -58,13 +58,6 @@
                 </p>
               </div>
               <div class="col-md-12 mb-3">
-                <label>Check-out Date</label>
-                <input type="date" formControlName="checkOut" class="form-control" required />
-                <p *ngIf="checkOut.touched && checkOut.invalid" class="error">
-                  <sup>*</sup>Please select a valid check-out date
-                </p>
-              </div>
-              <div class="col-md-12 mb-3">
                 <label>Number of Persons</label>
                 <input type="number" formControlName="persons" class="form-control" required />
                 <p *ngIf="persons.touched && persons.invalid" class="error">
@@ -78,7 +71,7 @@
                 class="btn btn-success btn-block"
                 [disabled]="!editForm.valid"
               >
-                Update User
+                Update Reservation
               </button>
             </div>
           </div>

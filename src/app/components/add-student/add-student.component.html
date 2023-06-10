@@ -1,5 +1,5 @@
 <div class="pt-3 pb-2 mb-3 border-bottom">
-  <h2 class="h2">Add User</h2>
+  <h2 class="h2">Add Reservation</h2>
 </div>
 
 <form [formGroup]="userForm" (ngSubmit)="submitUserData()" novalidate>
@@ -85,21 +85,6 @@
           </p>
         </div>
 
-        <div class="col-md-12 mb-3">
-          <label>Check-Out</label>
-          <input
-            type="date"
-            formControlName="checkOut"
-            class="form-control"
-            required
-            [min]="userForm.get('checkIn').value"
-          />
-
-          <!-- errors-->
-          <p *ngIf="checkOut.touched && checkOut.invalid" class="error">
-            <sup>*</sup>Please select a valid Check-Out date
-          </p>
-        </div>
 
         <div class="col-md-12 mb-3">
           <label>Persons</label>

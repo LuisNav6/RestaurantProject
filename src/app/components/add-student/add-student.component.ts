@@ -35,7 +35,6 @@ export class AddStudentComponent implements OnInit {
       ],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       checkIn: ['', [Validators.required]],
-      checkOut: ['', [Validators.required]],
       persons: ['', [Validators.required, Validators.min(1)]],
     });
   }
@@ -72,9 +71,6 @@ export class AddStudentComponent implements OnInit {
     return this.userForm.get('checkIn');
   }
 
-  get checkOut() {
-    return this.userForm.get('checkOut');
-  }
 
   get persons() {
     return this.userForm.get('persons');

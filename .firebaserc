@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "restaurantetacomundo": {
+      "hosting": {
+        "angularfirebase-student-app": [
+          "restaurantetacomundo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "restaurantetacomundo"
+  }
+}

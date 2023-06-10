@@ -41,6 +41,11 @@ import { MeetOurTeamComponent } from './components/home/meet-our-team/meet-our-t
 import { ExploreComponent } from './components/home/explore/explore.component';
 import { SectionSatisfyComponent } from './components/home/section-satisfy/section-satisfy.component';
 import { SectionMissionComponent } from './components/home/section-mission/section-mission.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 
 @NgModule({
   declarations: [
@@ -85,7 +90,12 @@ import { SectionMissionComponent } from './components/home/section-mission/secti
     RouterModule,
     FlexLayoutModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    provideRemoteConfig(() => getRemoteConfig())
   ],
   exports: [
     HeaderComponent,

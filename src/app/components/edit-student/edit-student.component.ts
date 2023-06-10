@@ -54,9 +54,6 @@ export class EditStudentComponent implements OnInit {
     return this.editForm.get('checkIn');
   }
 
-  get checkOut() {
-    return this.editForm.get('checkOut');
-  }
 
   get persons() {
     return this.editForm.get('persons');
@@ -75,7 +72,6 @@ export class EditStudentComponent implements OnInit {
       ],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       checkIn: ['', [Validators.required, this.validateCheckInDate]],
-      checkOut: ['', [Validators.required, this.validateCheckOutDate]],
       persons: ['', [Validators.required, Validators.min(1)]],
     });
   }
@@ -86,11 +82,6 @@ export class EditStudentComponent implements OnInit {
     return selectedDate > currentDate ? null : { invalidCheckInDate: true };
   }
 
-  validateCheckOutDate(control: FormControl) {
-    const selectedDate = new Date(control.value);
-    const currentDate = new Date();
-    return selectedDate > currentDate ? null : { invalidCheckOutDate: true };
-  }
 
   goBack() {
     this.location.back();

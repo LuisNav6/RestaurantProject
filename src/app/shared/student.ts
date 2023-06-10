@@ -5,6 +5,5 @@ export interface User {
   email: string;
   mobileNumber: Number;
   checkIn: Date;
-  checkOut: Date;
   persons: number;
 }
