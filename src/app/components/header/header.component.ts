@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/user.service';
 
@@ -7,7 +7,7 @@ import { UserService } from 'src/app/shared/user.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   @Input() loggedIn: boolean;
   @Input() userEmail: string;
   
@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   userEmailHeader: string = '';
 
   constructor(private auth: UserService, private router: Router) {}
+ 
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -25,6 +26,13 @@ export class HeaderComponent implements OnInit {
     } else {
       this.isTransparent = true;
     }
+  }
+
+  ngAfterViewInit(): void {
+    this.auth.userEmail.subscribe((userEmail) => {
+      this.userEmailHeader = userEmail;
+      console.log(this.userEmailHeader);
+    });
   }
 
   ngOnInit(): void {
@@ -39,10 +47,6 @@ export class HeaderComponent implements OnInit {
           this.router.navigate(['/login']);
         }
       }
-    });
-    this.auth.userEmail.subscribe((userEmail) => {
-      this.userEmailHeader = userEmail;
-      console.log(this.userEmailHeader);
     });
   }
 
