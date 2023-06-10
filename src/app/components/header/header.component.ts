@@ -48,6 +48,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         }
       }
     });
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate([this.router.url]);
+    });
   }
 
   getMenuContainerWidth(): number {
