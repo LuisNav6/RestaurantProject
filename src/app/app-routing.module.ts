@@ -10,6 +10,10 @@ import { LoginSmsComponent } from './components/login-sms/login-sms.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './components/home/home.component';
+import { BookComponent } from './components/book/book.component';
+import { OrderComponent } from './components/order/order.component';
+import { OrdersListComponent } from './components/orders-list/orders-list.component';
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home'},
@@ -21,6 +25,9 @@ const routes: Routes = [
   { path: 'queries', component: QueriesComponent, canActivate: [AuthGuard] },
   { path: 'login-sms', component: LoginSmsComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'book', component: BookComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'orders-list', component: OrdersListComponent },
 ];
 
 @NgModule({

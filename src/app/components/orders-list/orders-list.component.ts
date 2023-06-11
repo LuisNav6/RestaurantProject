@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../../shared/crud.service';
-import { User } from '../../shared/student';
+import { Order } from '../../shared/order';
 import { ToastrService } from 'ngx-toastr';
-
 @Component({
-  selector: 'app-student-list',
-  templateUrl: './student-list.component.html',
-  styleUrls: ['./student-list.component.scss'],
+  selector: 'app-orders-list',
+  templateUrl: './orders-list.component.html',
+  styleUrls: ['./orders-list.component.scss']
 })
-export class StudentListComponent implements OnInit {
+export class OrdersListComponent implements OnInit {
+
   p: number = 1;
-  user: User[];
+  order: Order[];
   hideWhenNoStudent: boolean = false;
   noData: boolean = false;
   preLoader: boolean = true;
@@ -19,13 +19,14 @@ export class StudentListComponent implements OnInit {
 
   ngOnInit() {
     this.dataState();
-    this.crudApi.GetUsersList().subscribe((data: User[]) => {
-      this.user = data;
+    this.crudApi.GetOrdersList().subscribe((data: Order[]) => {
+      this.order = data;
+      console.log(data);
     });
   }
 
   dataState() {
-    this.crudApi.GetUsersList().subscribe((data: User[]) => {
+    this.crudApi.GetOrdersList().subscribe((data: Order[]) => {
       this.preLoader = false;
       if (data.length <= 0) {
         this.hideWhenNoStudent = false;
@@ -37,10 +38,10 @@ export class StudentListComponent implements OnInit {
     });
   }
 
-  deleteUser(user: User) {
-    if (window.confirm('Are you sure you want to delete this student?')) {
-      this.crudApi.DeleteUser(user.$key);
-      this.toastr.success(user.firstName + ' successfully deleted!');
+  deleteUser(order: Order) {
+    if (window.confirm('¿Estás seguro de que quieres eliminar este pedido?')) {
+      this.crudApi.DeleteOrderByFirstName(order.firstName);
+      this.toastr.success(order.firstName + ' eliminado correctamente!');
     }
   }
 }
