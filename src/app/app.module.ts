@@ -46,6 +46,10 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
+import { BookComponent } from './components/book/book.component';
+import { OrderComponent } from './components/order/order.component';
+import { OrdersListComponent } from './components/orders-list/orders-list.component';
+
 
 @NgModule({
   declarations: [
@@ -71,7 +75,10 @@ import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config
     MenuContainerComponent,
     ExploreComponent,
     SectionSatisfyComponent,
-    SectionMissionComponent
+    SectionMissionComponent,
+    BookComponent,
+    OrderComponent,
+    OrdersListComponent
   ],
   imports: [
     BrowserModule,
